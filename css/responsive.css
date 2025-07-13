@@ -1,0 +1,81 @@
+/* Print Styles */
+@media print {
+  .navbar,
+  .hero-buttons,
+  .btn,
+  .modal {
+    display: none;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .section-header,
+  .history,
+  .timeline-section,
+  .battles,
+  .gallery,
+  .memorial {
+    page-break-inside: avoid;
+  }
+}
+
+/* Additional Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Accessibility Enhancements */
+.keyboard-navigation *:focus {
+  outline: 2px solid var(--vn-yellow);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --gray-600: #000000;
+    --gray-300: #ffffff;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --gray-100: #2a2a2a;
+    --gray-200: #3a3a3a;
+  }
+}

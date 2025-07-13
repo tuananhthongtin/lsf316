@@ -1,0 +1,79 @@
+/* Battles Section */
+.battles {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.battles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.battle-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.battle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.battle-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.battle-content {
+  padding: 24px;
+}
+
+.battle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.battle-period {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.battle-icon {
+  font-size: 20px;
+}
+
+.battle-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--military-navy);
+  margin-bottom: 16px;
+}
+
+.battle-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.battle-list li {
+  color: var(--gray-600);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .battles-grid {
+    grid-template-columns: 1fr;
+  }
+}
